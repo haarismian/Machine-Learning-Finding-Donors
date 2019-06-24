@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Finding Donors</title>
+<title>finding_donors</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13089,7 +13089,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13914,7 +13914,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <h3 id="K-Nearest-Neighbour:">K Nearest Neighbour:<a class="anchor-link" href="#K-Nearest-Neighbour:">&#182;</a></h3><h4 id="Real-world-application:">Real world application:<a class="anchor-link" href="#Real-world-application:">&#182;</a></h4><p>KNN works very well for recommendation engines such as netflix or youtube.</p>
 <h4 id="Strengths:">Strengths:<a class="anchor-link" href="#Strengths:">&#182;</a></h4><p>The model is easy to implement and to understand with minimal coding required. in KNN there are no probability distributions assumed based on data, which is very useful when the probability distribution isn't known.</p>
 <h4 id="Weaknesses-of-the-model:">Weaknesses of the model:<a class="anchor-link" href="#Weaknesses-of-the-model:">&#182;</a></h4><p>As the neame suggests, KNN gets its data from neighbouring inputs which results in siginificant outcome impact by localized outliers. Because KNN is a lazy-learner, most of its computation is done during testing result in long computation times for large data sets. There is also the potential for bias when there is a single classification/category more present than another, but can be manually dealt with by adjusting the weighting based on the occurence.</p>
-<h4 id="What-makes-it-a-good-candidate-for-the-problem:">What makes it a good candidate for the problem:<a class="anchor-link" href="#What-makes-it-a-good-candidate-for-the-problem:">&#182;</a></h4><p>Just like the others, because it has enough data with over 50 samples, the data is labeled and there is a small enough sample size of under 100,000.</p>
+<h4 id="What-makes-it-a-good-candidate-for-the-problem:">What makes it a good candidate for the problem:<a class="anchor-link" href="#What-makes-it-a-good-candidate-for-the-problem:">&#182;</a></h4><p>KNN is good because of the importance placed on the likelihood of accuracy that we predice someone to be &gt;50k. KNN predicts this occurrence less frequently but with greater accuracy when the clusters are clear.</p>
 
 </div>
 </div>
@@ -14213,7 +14213,12 @@ Because of the low time for training and prediction, high f score, I believe the
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>SGD works by calculating the true gradient by approximating it at single examples. During training it will update this gradient on the individual examples. It will iteratively find the minimum or maximum. After it shuffles, splits, and the initial training, it makes an estimate of the gradient. The algorithm will then go through the training set in many iterations and at each exaple will adjust based on the feedback and will keep doing so until it reaches convergence.</p>
+<p>SGD works by calculating the true gradient  by approximating it at single examples. During training it will update this gradient on the individual examples. It will iteratively find the minimum or maximum. After it shuffles, splits, and the initial training, it makes an estimate of the gradient. The algorithm will then go through the training set in many iterations and at each exaple will adjust based on the feedback and will keep doing so until it reaches convergence.</p>
+<p>The simplest way to understand this is to think of a tailor:
+Tailor makes an initial estimate.
+A random guy (or a subset of the full group) tries the t-shirt and gives feedback about its fit.
+The tailor makes a small adjustment according to feedback.
+Repeat until we have a satisfactory result</p>
 
 </div>
 </div>
